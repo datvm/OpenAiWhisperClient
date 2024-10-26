@@ -113,7 +113,7 @@ customElements.get("whisper-app") ?? customElements.define("whisper-app", class 
         this.#setDisplay(this.#pnlError, true);
     }
     async #fillLanguagesAsync() {
-        const langs = await fetch("/languages.json")
+        const langs = await fetch("./languages.json")
             .then(r => r.json());
         const frag = new DocumentFragment();
         { // Add none option
